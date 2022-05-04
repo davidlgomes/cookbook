@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <header>
+    </header>
+    <body>
+        <h1>Livro de Receitas </h1>
+            <%@recipes.each do |recipe|%>
+                <a href= "/recipes/<%=recipe.id%>"><%=recipe.name%></br> </a>
+            <%end%>
+            
+    </body>
+</html>

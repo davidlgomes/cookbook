@@ -1,0 +1,11 @@
+<h1>Cadastrar novos tipos de Receita</h1>
+<%if flash[:notice]%>
+    <div style="margin:10px 0px">
+        <%= flash[:notice]%>
+    </div>
+<%end%>
+<%=form_with model: @recipe_type do |formulario|%>
+    <%=formulario.label :name, 'Name:'%>
+    <%=formulario.text_field :name %>
+    <%=formulario.submit 'Enviar'%>
+<%end%>

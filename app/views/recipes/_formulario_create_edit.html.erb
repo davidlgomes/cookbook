@@ -1,0 +1,15 @@
+<%=form_with model: recipe do |formulario|%>
+        <%=formulario.label 'Name:'%></br>
+        <%=formulario.text_field :name%></br>
+        <%=formulario.label 'Recipe type:'%></br>
+        <%=formulario.collection_select :recipe_type_id, RecipeType.all, :id, :name%></br>
+        <%=formulario.label 'Cook Time:'%></br>
+        <%=formulario.number_field :cook_time%></br>
+        <%=formulario.label 'Cuisine:'%></br>
+        <%=formulario.text_field :cuisine%></br>
+        <%=formulario.label 'Ingredients:'%></br>
+        <%=formulario.text_area :ingredients%></br>
+        <%=formulario.label 'Cook Method:'%></br>
+        <%=formulario.text_area :cook_method%></br>
+        <%=formulario.submit 'Enviar'%>  
+    <%end%>
